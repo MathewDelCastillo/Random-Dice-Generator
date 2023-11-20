@@ -1,0 +1,89 @@
+      .rolling {
+      animation: roll 1s linear, shake 0.5s ease-in-out;
+    }
+  
+  @keyframes roll {
+      0%  {
+        transform: rotate(0deg) translate(0, 0);
+      }
+      25% {
+        transform: rotate(90deg) translate(-20vw, 0);
+      }
+      50% {
+        transform: rotate(180deg) translate(40vw, 0);
+      }
+      75% {
+        transform: rotate(270deg) translate(-20vw, 0);
+      }
+      100% {
+        transform: rotate(360deg) translate(-10, -10);
+      }
+    }
+    
+  
+  @keyframes shake {
+    0% {
+      transform: translateX(-250px);
+    }
+    10%{
+      transform: translateX(200px);
+    }
+    20%{
+      transform: translateX(-150px);
+    }
+    30% {
+        transform: translateX(100px);
+    }
+    40%{
+        transform: translateX(-75px);
+    }
+    50%{
+        transform: translateX(50px);
+    }
+    60% {
+        transform: translateX(-25px);
+    }
+    70%{
+        transform: translateX(15px);
+    }
+    80%{
+        transform: translateX(-10px);
+    }
+    90%{
+        transform: translateX(5px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+    }
+    .dice-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+  
+  .dice {
+    height: 45vh;
+    color: green; /* Set the color of the dice */
+    /* animation: roll 5s linear infinite; */
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: green; /* Set the background color of the button */
+    color: white; /* Set the text color of the button */
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* animation: roll 5s linear infinite; */
+  }
+  
+  button:disabled {
+    background-color: gray; /* Set a different color for the disabled button */
+    cursor: not-allowed;
+  }
